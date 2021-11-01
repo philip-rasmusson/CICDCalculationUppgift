@@ -6,6 +6,17 @@
     {
         static void Main(string[] args)
         {
+
+
+
+
+
+
+
+
+
+
+
             Console.Write("Enter first operator: ");
             string op1 = Console.ReadLine();
 
