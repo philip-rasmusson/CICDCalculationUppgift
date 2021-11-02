@@ -43,11 +43,9 @@ workflows:
       - test:
       filters:
             branches:
-              only: deployment
+              only: 
+              - deployment
       - build:
-      filters:
-            branches:
-              only: deployment
           requires:
             - test
           
