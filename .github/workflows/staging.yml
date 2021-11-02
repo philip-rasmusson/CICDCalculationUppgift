@@ -9,7 +9,7 @@ on:
 jobs:
   build:
 
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
@@ -27,7 +27,7 @@ jobs:
   deploymentStaging:
     needs: build
     
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     environment:
       name: Staging
       url: https://github.com
@@ -46,7 +46,7 @@ jobs:
   deploymentProduction:
     needs: deploymentStaging
     
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     environment:
       name: Production
       url: https://github.com/94Douglas/CICDCalculationUppgift
