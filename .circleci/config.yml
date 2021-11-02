@@ -39,8 +39,14 @@ jobs:
           command: dotnet.exe build --configuration Release
 workflows:
   test_and_build:
-    jobs:
-      - test
+    jobs:      
+      - test:
+          filters:
+            branches:
+              only:
+              - deployment
       - build:
           requires:
             - test
+          
+            
