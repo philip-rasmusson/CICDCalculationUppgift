@@ -40,13 +40,9 @@ jobs:
 workflows:
   test_and_build:
     jobs:
-      - test
+      - test:
       filters:
             branches:
-              ignore:
-                - master
-                - dev
-                - staging
-      - build:
+              only: deployment
           requires:
             - test
