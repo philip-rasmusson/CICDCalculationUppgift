@@ -2,10 +2,6 @@ version: 2.1
 
 orbs:
   windows: circleci/windows@2.2.0
-general:
-branches:
-  only:
-   - deployment # list of branches to build
 
 jobs:
   test:
@@ -42,6 +38,9 @@ jobs:
           name: "Build Application according to some given configuration"
           command: dotnet.exe build --configuration Release
 workflows:
+  branches:
+    only:
+    - deployment # list of branches to build
   test_and_build:
     jobs:
       - test
