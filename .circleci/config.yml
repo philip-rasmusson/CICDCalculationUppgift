@@ -2,10 +2,6 @@ version: 2.1
 
 orbs:
   windows: circleci/windows@2.2.0
-    general:
-      branches:
-        only:
-          - deployment # list of branches to build
 
 jobs:
   test:
