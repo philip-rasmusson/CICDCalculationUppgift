@@ -41,10 +41,10 @@ workflows:
   test_and_build:
     jobs:      
       - test:
-        filters:
-          branches:
-            only:
-             - deployment
+          filters:
+            branches:
+              only:
+              - deployment
       - build:
           requires:
             - test
