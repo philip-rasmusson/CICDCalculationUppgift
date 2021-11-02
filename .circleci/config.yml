@@ -41,6 +41,12 @@ workflows:
   test_and_build:
     jobs:
       - test
+      filters:
+            branches:
+              ignore:
+                - master
+                - dev
+                - staging
       - build:
           requires:
             - test
