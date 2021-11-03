@@ -120,6 +120,7 @@
                 double summa = (first / second) * third;
                 Console.WriteLine(first + op1 + second + op2 + third + "=" + summa);
             }
+            Console.Read();
            
         }
     }
