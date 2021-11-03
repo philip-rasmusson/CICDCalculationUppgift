@@ -16,7 +16,7 @@
             string first1 = Console.ReadLine();
             int first = Convert.ToInt32(first1);
 
-            Console.Write("Enter second number: ");
+            Console.Write("Enter second number : ");
             string second2 = Console.ReadLine();
             int second = Convert.ToInt32(second2);
 
