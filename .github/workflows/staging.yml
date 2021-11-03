@@ -49,7 +49,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: Production
-      url: https://github.com/94Douglas/CICDCalculationUppgift
+      url: https://github.com/philip-rasmusson/CICDCalculationUppgift
       
     steps:
     - name: Check out repository code
