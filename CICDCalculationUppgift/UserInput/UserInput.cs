@@ -36,8 +36,16 @@ namespace CICDCalculationUppgift.UserInput
                 if (!CheckDouble(input)) Console.WriteLine("Invalid input, try again");
                 else
                 {
-                    convertedToDouble = Convert.ToDouble(input);
-                    break;
+                    if (Convert.ToDouble(input) <= double.MaxValue)
+                    {
+                        convertedToDouble = Convert.ToDouble(input);
+                        break;
+
+                    }
+                    else
+                    {
+                        Console.WriteLine("Number too high");
+                    }
                 }
             } 
             return convertedToDouble;
@@ -59,7 +67,7 @@ namespace CICDCalculationUppgift.UserInput
         {
             return (op == "+" || op == "-" || op == "*" || op == "/");              
         }
-        private bool CheckDouble(string number)
+        public bool CheckDouble(string number)
         {
             try
             {
@@ -71,5 +79,6 @@ namespace CICDCalculationUppgift.UserInput
                 throw;
             }             
         }
+        
     }
 }
