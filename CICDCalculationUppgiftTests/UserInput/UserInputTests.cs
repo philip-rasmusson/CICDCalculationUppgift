@@ -44,7 +44,7 @@ namespace CICDCalculationUppgift.UserInput.Tests
         }
         [Test()]
         [TestCase("")]
-        [TestCase("22,33.44")]
+        [TestCase("22,33..44")]
         [TestCase("333ddd")]
         [TestCase("..;;")]
         [TestCase(" ")]
