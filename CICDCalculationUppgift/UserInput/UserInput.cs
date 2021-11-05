@@ -22,24 +22,24 @@ namespace CICDCalculationUppgift.UserInput
 
             Num2 = InputNumber("second");
 
-            Op1 = InputOperator("second");
+            Op2 = InputOperator("second");
 
             Num3 = InputNumber("third");
         }
         private double InputNumber(string order)
         {
             double convertedToDouble;
-            do
+            while(true)
             {
                 Console.Write($"Enter {order} number: ");
-                string input = Console.ReadLine();
+                var input = Console.ReadLine();
                 if (!CheckDouble(input)) Console.WriteLine("Invalid input, try again");
                 else
                 {
                     convertedToDouble = Convert.ToDouble(input);
                     break;
                 }
-            } while (true);
+            } 
 
             return convertedToDouble;
         }
