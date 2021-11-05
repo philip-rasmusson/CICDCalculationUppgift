@@ -40,7 +40,6 @@ namespace CICDCalculationUppgift.UserInput
                     break;
                 }
             } 
-
             return convertedToDouble;
         }
 
@@ -56,7 +55,7 @@ namespace CICDCalculationUppgift.UserInput
 
             return input;
         }
-        private bool CheckOperator(string op)
+        public bool CheckOperator(string op)
         {
             return (op == "+" || op == "-" || op == "*" || op == "/");              
         }
