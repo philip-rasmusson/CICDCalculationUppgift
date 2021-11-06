@@ -74,5 +74,15 @@ namespace CICDCalculationUppgift.Tests
             var actual = calc.Calculate(userInput);
             Assert.AreEqual(expected, actual);
         }
+        [Test()]
+        [TestCase(50, 45, 10)]
+        public void CalculateTest_Subtract_Multiply(double num1, double num2, double num3)
+        {
+            Calculation calc = new();
+            var userInput = new UserInput.UserInput() { Num1 = num1, Num2 = num2, Num3 = num3, Op1 = "-", Op2 = "*" };
+            var expected = num1 - num2 * num3;
+            var actual = calc.Calculate(userInput);
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
