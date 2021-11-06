@@ -7,16 +7,17 @@
         static void Main(string[] args)
         {
             bool run = true;
-            UserInput.UserInput userInput = new();
             Calculation calc = new();
 
             while (run)
             {
                 Console.Clear();
-
+                //Creates a new instance of UserInput with no value assigned
+                UserInput.UserInput userInput = new();
+                //Runs method to ask for user input
                 userInput.CheckUserInput();
-
-                Console.WriteLine(userInput.Num1 + userInput.Op1 + userInput.Num2 + userInput.Op2 + userInput.Num3 + "=" + calc.Calculate(userInput));
+                //Prints the result of calculatino
+                Console.WriteLine($"{userInput.Num1} {userInput.Op1} {userInput.Num2} { userInput.Op2 } { userInput.Num3} = { calc.Calculate(userInput)}");
 
                 #region
                 //if (userInput.Op1 == "+" && userInput.Op2 == "+")
