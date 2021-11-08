@@ -8,12 +8,48 @@ namespace CICDCalculationUppgift.UserInput
 {
     public class UserInput
     {
-        public string Op1 { get; set; }
-        public string Op2 { get; set; }
         public double Num1 { get; set; }
         public double Num2 { get; set; }
         public double Num3 { get; set; }
+        public string Op1 { get; set; }
+        public string Op2 { get; set; }
 
+        /// <summary>
+        /// Check if user input can be converted to a double value
+        /// </summary>
+        /// <param name="number">
+        /// user input as a string
+        /// </param>
+        /// <returns>
+        /// True/false
+        /// </returns>
+        public bool CheckDouble(string number)
+        {
+            try
+            {
+                return Double.TryParse(number, out var doubleValue);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Checks if user input is an accepted operator
+        /// </summary>
+        /// <param name="op">
+        /// User input
+        /// </param>
+        /// <returns>
+        /// True if user input is an accepted operator, else false
+        /// </returns>
+        public bool CheckOperator(string op)
+        {
+            return (op == "+" || op == "-" || op == "*" || op == "/");
+        }
+
+        //Method to assign user input to variables
         public void CheckUserInput()
         {
             Num1 = InputNumber("first");
@@ -26,12 +62,22 @@ namespace CICDCalculationUppgift.UserInput
 
             Num3 = InputNumber("third");
         }
-        private double InputNumber(string order)
+
+        /// <summary>
+        /// Asks user to enter a number
+        /// </summary>
+        /// <param name="whichNumber">
+        /// Which number is beeing asked for(first, second or third)
+        /// </param>
+        /// <returns>
+        /// User input converted to double
+        /// </returns>
+        private double InputNumber(string whichNumber)
         {
             double convertedToDouble;
-            while(true)
+            while (true)
             {
-                Console.Write($"Enter {order} number: ");
+                Console.Write($"Enter {whichNumber} number: ");
                 var input = Console.ReadLine();
                 if (!CheckDouble(input)) Console.WriteLine("Invalid input, try again");
                 else
@@ -40,45 +86,36 @@ namespace CICDCalculationUppgift.UserInput
                     {
                         convertedToDouble = Convert.ToDouble(input);
                         break;
-
                     }
                     else
                     {
                         Console.WriteLine("Number too high");
                     }
                 }
-            } 
+            }
             return convertedToDouble;
         }
 
-        private string InputOperator(string order)
+        /// <summary>
+        /// Asks user to enter an operator
+        /// </summary>
+        /// <param name="whichOperator">
+        /// Which operator is beeing asked for(first or second)
+        /// </param>
+        /// <returns>
+        /// User input as a string
+        /// </returns>
+        private string InputOperator(string whichOperator)
         {
             string input;
             do
             {
-                Console.Write($"Enter {order} operator: ");
+                Console.Write($"Enter {whichOperator} operator: ");
                 input = Console.ReadLine();
                 if (!CheckOperator(input)) Console.WriteLine("Invalid input, try again");
             } while (!CheckOperator(input));
 
             return input;
         }
-        public bool CheckOperator(string op)
-        {
-            return (op == "+" || op == "-" || op == "*" || op == "/");              
-        }
-        public bool CheckDouble(string number)
-        {
-            try
-            {
-                return Double.TryParse(number, out var doubleValue);
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }             
-        }
-        
     }
 }
