@@ -6,8 +6,10 @@
     {
         public static void Main(string[] args)
         {
+            //Displays an animated welcome message and menu
             new Welcome().DisplayMessageAndMenu();
             Console.ReadKey();
+
             bool run = true;
             while (run)
             {
