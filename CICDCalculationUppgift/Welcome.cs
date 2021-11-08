@@ -8,6 +8,9 @@
 
     public class Welcome
     {
+        /// <summary>
+        /// Display Calculator and Menu and clear console with a time delay in between
+        /// </summary>
         public async void DisplayMessageAndMenu()
         {
             Console.Clear();
