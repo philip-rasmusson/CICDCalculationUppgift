@@ -97,6 +97,16 @@
                     double summa = userInput.Num1 / userInput.Num2 * userInput.Num3;
                     Console.WriteLine(userInput.Num1 + userInput.Op1 + userInput.Num2 + userInput.Op2 + userInput.Num3 + "=" + summa);
                 }
+                Console.WriteLine("To exit write 'exit', try again by pressing enter");
+                switch (Console.ReadLine().ToLower())
+                {
+                    case "exit":
+                        run = false;
+                        break;
+
+                    default:
+                        break;
+                }
             }
         }
     }
