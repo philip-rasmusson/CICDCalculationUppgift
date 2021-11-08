@@ -12,24 +12,15 @@ namespace CICDCalculationUppgift.UserInput.Tests
     public class UserInputTests
     {
         [Test()]
-        [TestCase("+")]
-        [TestCase("-")]
-        [TestCase("*")]
-        [TestCase("/")]
-        public void CheckOperatorTestPassIfTrue(string input)
-        {
-            UserInput userInput = new();
-            Assert.IsTrue(userInput.CheckOperator(input));
-        }
-        [Test()]
         [TestCase("")]
+        [TestCase("22,33..44")]
         [TestCase("333ddd")]
         [TestCase("..;;")]
         [TestCase(" ")]
-        public void CheckOperatorTestPassIfFalse(string input)
+        public void CheckDoubleTestPassIfFalse(string input)
         {
             UserInput userInput = new();
-            Assert.IsFalse(userInput.CheckOperator(input));
+            Assert.IsFalse(userInput.CheckDouble(input));
         }
 
         [Test()]
@@ -42,17 +33,27 @@ namespace CICDCalculationUppgift.UserInput.Tests
             UserInput userInput = new();
             Assert.IsTrue(userInput.CheckDouble(input));
         }
+
         [Test()]
         [TestCase("")]
-        [TestCase("22,33..44")]
         [TestCase("333ddd")]
         [TestCase("..;;")]
         [TestCase(" ")]
-        public void CheckDoubleTestPassIfFalse(string input)
+        public void CheckOperatorTestPassIfFalse(string input)
         {
             UserInput userInput = new();
-            Assert.IsFalse(userInput.CheckDouble(input));
+            Assert.IsFalse(userInput.CheckOperator(input));
+        }
+
+        [Test()]
+        [TestCase("+")]
+        [TestCase("-")]
+        [TestCase("*")]
+        [TestCase("/")]
+        public void CheckOperatorTestPassIfTrue(string input)
+        {
+            UserInput userInput = new();
+            Assert.IsTrue(userInput.CheckOperator(input));
         }
     }
-    
 }
