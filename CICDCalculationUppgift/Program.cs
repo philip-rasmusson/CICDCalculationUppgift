@@ -92,11 +92,16 @@
 
 
                 //Possibility to exit program by the end of each cycle by typing "exit"
-                Console.WriteLine("To exit write 'exit', try again by pressing enter");
+                Console.WriteLine("To exit write 'exit'.");
+                Console.WriteLine("Write 'menu' to go to the menu.");
                 switch (Console.ReadLine().ToLower())
                 {
                     case "exit":
                         run = false;
+                        break;
+
+                    case "menu":
+                        new Welcome().DisplayMessageAndMenu();
                         break;
 
                     default:
