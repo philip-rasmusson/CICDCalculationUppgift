@@ -14,6 +14,7 @@
         public async void DisplayMessageAndMenu()
         {
             Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine(" ____  ____  _     ____  _     _     ____  _____  ____  ____ ");
             Console.WriteLine(@"/   _\/  _ \/ \   /   _\/ \ /\/ \   /  _ \/__ __\/  _ \/  __\");
             Console.WriteLine(@"|  /  | / \|| |   |  /  | | ||| |   | / \|  / \  | / \||  \/|");
@@ -28,6 +29,7 @@
             Console.WriteLine(@"\_/  \|\____\\_/  \|\____/");
             Console.WriteLine();
             Console.WriteLine("Press any key to start");
+            Console.ForegroundColor = ConsoleColor.White;
         }
     }
 }
