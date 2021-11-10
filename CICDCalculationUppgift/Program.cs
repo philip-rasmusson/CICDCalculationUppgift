@@ -6,13 +6,13 @@
     {
         public static void Main(string[] args)
         {
+            bool run = true;
+            while (run)
+            {
             //Displays an animated welcome message and menu
             new Welcome().DisplayMessageAndMenu();
             Console.ReadKey();
 
-            bool run = true;
-            while (run)
-            {
 
                 //Double-variable for storing the result of each calculation below. Originally changed from using Integers to allow for the use of decimals. 
                 double summa = 0;
@@ -94,6 +94,7 @@
                 //Possibility to exit program by the end of each cycle by typing "exit"
                 Console.WriteLine("To exit write 'exit'.");
                 Console.WriteLine("Write 'menu' to go to the menu.");
+                Console.WriteLine("Or press 'c' to continue.");
                 switch (Console.ReadLine().ToLower())
                 {
                     case "exit":
@@ -101,9 +102,10 @@
                         break;
 
                     case "menu":
-                        new Welcome().DisplayMessageAndMenu();
+                        run = true;
                         break;
 
+                    case "c":
                     default:
                         break;
                 }
