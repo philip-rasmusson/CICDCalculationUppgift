@@ -79,7 +79,7 @@ namespace CICDCalculationUppgift.UserInput
             {
                 Console.Write($"Enter {whichNumber} number: ");
                 var input = Console.ReadLine();
-                if (!CheckDouble(input)) Console.WriteLine("Invalid input, try again");
+                if (!CheckDouble(input)) Console.WriteLine($"{input} Is a invalid input, try again");
                 else
                 {
                     if (Convert.ToDouble(input) <= double.MaxValue)
