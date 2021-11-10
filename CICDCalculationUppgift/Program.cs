@@ -13,6 +13,7 @@
             bool run = true;
             while (run)
             {
+                double summa;
                 Console.Clear();
                 //Creates a new instance of UserInput with no value assigned
                 UserInput.UserInput userInput = new();
@@ -21,82 +22,82 @@
 
                 if (userInput.Op1 == "+" && userInput.Op2 == "+")
                 {
-                    double summa = userInput.Num1 + userInput.Num2 + userInput.Num3;
+                    summa = userInput.Num1 + userInput.Num2 + userInput.Num3;
                     Console.WriteLine(userInput.Num1 + userInput.Op1 + userInput.Num2 + userInput.Op2 + userInput.Num3 + "=" + summa);
                 }
                 else if (userInput.Op1 == "+" && userInput.Op2 == "-")
                 {
-                    double summa = userInput.Num1 + userInput.Num2 - userInput.Num3;
+                    summa = userInput.Num1 + userInput.Num2 - userInput.Num3;
                     Console.WriteLine(userInput.Num1 + userInput.Op1 + userInput.Num2 + userInput.Op2 + userInput.Num3 + "=" + summa);
                 }
                 else if (userInput.Op1 == "+" && userInput.Op2 == "/")
                 {
-                    double summa = userInput.Num1 + userInput.Num2 / userInput.Num3;
+                    summa = userInput.Num1 + userInput.Num2 / userInput.Num3;
                     Console.WriteLine(userInput.Num1 + userInput.Op1 + userInput.Num2 + userInput.Op2 + userInput.Num3 + "=" + summa);
                 }
                 else if (userInput.Op1 == "+" && userInput.Op2 == "*")
                 {
-                    double summa = userInput.Num1 + userInput.Num2 * userInput.Num3;
+                    summa = userInput.Num1 + userInput.Num2 * userInput.Num3;
                     Console.WriteLine(userInput.Num1 + userInput.Op1 + userInput.Num2 + userInput.Op2 + userInput.Num3 + "=" + summa);
                 }
                 else if (userInput.Op1 == "*" && userInput.Op2 == "-")
                 {
-                    double summa = userInput.Num1 * userInput.Num2 - userInput.Num3;
+                    summa = userInput.Num1 * userInput.Num2 - userInput.Num3;
                     Console.WriteLine(userInput.Num1 + userInput.Op1 + userInput.Num2 + userInput.Op2 + userInput.Num3 + "=" + summa);
                 }
                 else if (userInput.Op1 == "*" && userInput.Op2 == "+")
                 {
-                    double summa = userInput.Num1 * userInput.Num2 + userInput.Num3;
+                    summa = userInput.Num1 * userInput.Num2 + userInput.Num3;
                     Console.WriteLine(userInput.Num1 + userInput.Op1 + userInput.Num2 + userInput.Op2 + userInput.Num3 + "=" + summa);
                 }
                 else if (userInput.Op1 == "*" && userInput.Op2 == "*")
                 {
-                    double summa = userInput.Num1 * userInput.Num2 * userInput.Num3;
+                    summa = userInput.Num1 * userInput.Num2 * userInput.Num3;
                     Console.WriteLine(userInput.Num1 + userInput.Op1 + userInput.Num2 + userInput.Op2 + userInput.Num3 + "=" + summa);
                 }
                 else if (userInput.Op1 == "*" && userInput.Op2 == "/")
                 {
-                    double summa = userInput.Num1 * userInput.Num2 / userInput.Num3;
+                    summa = userInput.Num1 * userInput.Num2 / userInput.Num3;
                     Console.WriteLine(userInput.Num1 + userInput.Op1 + userInput.Num2 + userInput.Op2 + userInput.Num3 + "=" + summa);
                 }
                 else if (userInput.Op1 == "-" && userInput.Op2 == "-")
                 {
-                    double summa = userInput.Num1 - userInput.Num2 - userInput.Num3;
+                    summa = userInput.Num1 - userInput.Num2 - userInput.Num3;
                     Console.WriteLine(userInput.Num1 + userInput.Op1 + userInput.Num2 + userInput.Op2 + userInput.Num3 + "=" + summa);
                 }
                 else if (userInput.Op1 == "-" && userInput.Op2 == "+")
                 {
-                    double summa = userInput.Num1 - userInput.Num2 + userInput.Num3;
+                    summa = userInput.Num1 - userInput.Num2 + userInput.Num3;
                     Console.WriteLine(userInput.Num1 + userInput.Op1 + userInput.Num2 + userInput.Op2 + userInput.Num3 + "=" + summa);
                 }
                 else if (userInput.Op1 == "-" && userInput.Op2 == "*")
                 {
-                    double summa = userInput.Num1 - userInput.Num2 * userInput.Num3;
+                    summa = userInput.Num1 - userInput.Num2 * userInput.Num3;
                     Console.WriteLine(userInput.Num1 + userInput.Op1 + userInput.Num2 + userInput.Op2 + userInput.Num3 + "=" + summa);
                 }
                 else if (userInput.Op1 == "-" && userInput.Op2 == "/")
                 {
-                    double summa = userInput.Num1 - userInput.Num2 / userInput.Num3;
+                    summa = userInput.Num1 - userInput.Num2 / userInput.Num3;
                     Console.WriteLine(userInput.Num1 + userInput.Op1 + userInput.Num2 + userInput.Op2 + userInput.Num3 + "=" + summa);
                 }
                 else if (userInput.Op1 == "/" && userInput.Op2 == "/")
                 {
-                    double summa = userInput.Num1 / userInput.Num2 / userInput.Num3;
+                    summa = userInput.Num1 / userInput.Num2 / userInput.Num3;
                     Console.WriteLine(userInput.Num1 + userInput.Op1 + userInput.Num2 + userInput.Op2 + userInput.Num3 + "=" + summa);
                 }
                 else if (userInput.Op1 == "/" && userInput.Op2 == "+")
                 {
-                    double summa = userInput.Num1 / userInput.Num2 + userInput.Num3;
+                    summa = userInput.Num1 / userInput.Num2 + userInput.Num3;
                     Console.WriteLine(userInput.Num1 + userInput.Op1 + userInput.Num2 + userInput.Op2 + userInput.Num3 + "=" + summa);
                 }
                 else if (userInput.Op1 == "/" && userInput.Op2 == "-")
                 {
-                    double summa = userInput.Num1 / userInput.Num2 - userInput.Num3;
+                    summa = userInput.Num1 / userInput.Num2 - userInput.Num3;
                     Console.WriteLine(userInput.Num1 + userInput.Op1 + userInput.Num2 + userInput.Op2 + userInput.Num3 + "=" + summa);
                 }
                 else if (userInput.Op1 == "/" && userInput.Op2 == "*")
                 {
-                    double summa = userInput.Num1 / userInput.Num2 * userInput.Num3;
+                    summa = userInput.Num1 / userInput.Num2 * userInput.Num3;
                     Console.WriteLine(userInput.Num1 + userInput.Op1 + userInput.Num2 + userInput.Op2 + userInput.Num3 + "=" + summa);
                 }
 
